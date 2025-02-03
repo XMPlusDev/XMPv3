@@ -1,0 +1,646 @@
+{
+	"info": {
+		"_postman_id": "df6b575e-15cc-44e0-88b4-273aff5250ed",
+		"name": "XMPlusv3 API",
+		"description": "# 📄 API Documentation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "11768984"
+	},
+	"item": [
+		{
+			"name": "Token",
+			"item": [
+				{
+					"name": "getCsfrToken",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "XM-API-KEY",
+								"value": "sZgJTH2qxkGBkM3BoGWmTncfZ",
+								"type": "text"
+							}
+						],
+						"url": "https://v3.xmplus.dev/api/client/getCsfr"
+					},
+					"response": []
+				},
+				{
+					"name": "getToken",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "XM-API-KEY",
+								"value": "sZgJTH2qxkGBkM3BoGWmTncfZ",
+								"type": "text"
+							},
+							{
+								"key": "Xsfr-Name",
+								"value": "Xsfr679f22d1957b87.24492293",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Xsfr-Token",
+								"value": "https://v3.xmplus.dev/lwymYbjyLWLDi4zWDLo11KZaeYGPwzx3GdrzM7J7/s9snZfLSkseTJsRp09vPh3e6Uoj4Fk6zOwb9ixtMLpLX3PEaqQsJvDqChNsAsBjuE0+lpgEGlv98ok6E/oipyoa+H1KTs/b18B/xCLHu9+ERjzG+my4ri1k/nO8ufR4=",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@xmplus.dev\",\r\n    \"passwd\": \"XMPlus@2024Admin\",\r\n    \"Xsfr-Name\": \"Xsfr679f3d266721a4.37650679\",\r\n    \"Xsfr-Token\": \"rfx92pqu6EiW3iVrGUWxBoKjVg8yEuGGWhiEo2WLFUuW7LvPXbpoZE99dqmtapr6ASilZgDi8Pmqmz08b8DgY8+YROqomYwu87wUDX12gza1lTI+USDX42l7tZtT6SJ49Y7a+z6JDl17SRCanFOpzDJJnQcz25LAz/kFClz0glc=\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://v3.xmplus.dev/api/client/getToken"
+					},
+					"response": []
+				},
+				{
+					"name": "refreshToken",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "XM-Refresh-Token",
+								"value": "P5)o[B]Xn^5jg_]8b,+^~3[rwB",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Xsfr-Name\": \"Xsfr679f3d266721a4.37650679\",\r\n    \"Xsfr-Token\": \"rfx92pqu6EiW3iVrGUWxBoKjVg8yEuGGWhiEo2WLFUuW7LvPXbpoZE99dqmtapr6ASilZgDi8Pmqmz08b8DgY8+YROqomYwu87wUDX12gza1lTI+USDX42l7tZtT6SJ49Y7a+z6JDl17SRCanFOpzDJJnQcz25LAz/kFClz0glc=\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://v3.xmplus.dev/api/client/refreshToken"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "getAccountInfo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XM-Token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwczovL3YzLnhtcGx1cy5kZXYiLCJhdWQiOiJodHRwczovL3YzLnhtcGx1cy5kZXYiLCJpYXQiOjE3Mzg0OTE4ODksIm5iZiI6MTczODQ5MTg4OSwiZXhwIjoxNzM4NTc2NDg5LCJlbWFpbCI6ImFkbWluQHhtcGx1cy5kZXYiLCJwYXNzd2QiOiJlN2VmMzhmYTQyYjliZjQxMWQwMTc5ZjY0ZDBjMWU5ZCJ9.cNdsAoXRBZ0ISusMnZ0sFVZ5pNiRECsuUdd27QFAqkFLm9r07s24uuFUc4vFz8WSQ-tyNfrIc5OLqGATYsYRxg#YWFlNjU1YmRmYjkxMTQ1YzMwM2I0MzAwNzA1NzAyMjQwNWNhYmIxMDJiZjI1MzkxODQxYjdmZjdkNjhmY2MxMA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Xsfr-Name\": \"Xsfr679f3d266721a4.37650679\",\r\n    \"Xsfr-Token\": \"rfx92pqu6EiW3iVrGUWxBoKjVg8yEuGGWhiEo2WLFUuW7LvPXbpoZE99dqmtapr6ASilZgDi8Pmqmz08b8DgY8+YROqomYwu87wUDX12gza1lTI+USDX42l7tZtT6SJ49Y7a+z6JDl17SRCanFOpzDJJnQcz25LAz/kFClz0glc=\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://v3.xmplus.dev/api/client/account"
+					},
+					"response": []
+				},
+				{
+					"name": "redeemCard",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XM-Token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwczovL3YzLnhtcGx1cy5kZXYiLCJhdWQiOiJodHRwczovL3YzLnhtcGx1cy5kZXYiLCJpYXQiOjE3Mzg0OTE4ODksIm5iZiI6MTczODQ5MTg4OSwiZXhwIjoxNzM4NTc2NDg5LCJlbWFpbCI6ImFkbWluQHhtcGx1cy5kZXYiLCJwYXNzd2QiOiJlN2VmMzhmYTQyYjliZjQxMWQwMTc5ZjY0ZDBjMWU5ZCJ9.cNdsAoXRBZ0ISusMnZ0sFVZ5pNiRECsuUdd27QFAqkFLm9r07s24uuFUc4vFz8WSQ-tyNfrIc5OLqGATYsYRxg#YWFlNjU1YmRmYjkxMTQ1YzMwM2I0MzAwNzA1NzAyMjQwNWNhYmIxMDJiZjI1MzkxODQxYjdmZjdkNjhmY2MxMA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"fgfKMKL\",\r\n    \"Xsfr-Name\": \"Xsfr679f3d266721a4.37650679\",\r\n    \"Xsfr-Token\": \"rfx92pqu6EiW3iVrGUWxBoKjVg8yEuGGWhiEo2WLFUuW7LvPXbpoZE99dqmtapr6ASilZgDi8Pmqmz08b8DgY8+YROqomYwu87wUDX12gza1lTI+USDX42l7tZtT6SJ49Y7a+z6JDl17SRCanFOpzDJJnQcz25LAz/kFClz0glc=\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://v3.xmplus.dev/api/client/account/redeem"
+					},
+					"response": []
+				},
+				{
+					"name": "rechargeAccount",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XM-Token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwczovL3YzLnhtcGx1cy5kZXYiLCJhdWQiOiJodHRwczovL3YzLnhtcGx1cy5kZXYiLCJpYXQiOjE3Mzg0OTE4ODksIm5iZiI6MTczODQ5MTg4OSwiZXhwIjoxNzM4NTc2NDg5LCJlbWFpbCI6ImFkbWluQHhtcGx1cy5kZXYiLCJwYXNzd2QiOiJlN2VmMzhmYTQyYjliZjQxMWQwMTc5ZjY0ZDBjMWU5ZCJ9.cNdsAoXRBZ0ISusMnZ0sFVZ5pNiRECsuUdd27QFAqkFLm9r07s24uuFUc4vFz8WSQ-tyNfrIc5OLqGATYsYRxg#YWFlNjU1YmRmYjkxMTQ1YzMwM2I0MzAwNzA1NzAyMjQwNWNhYmIxMDJiZjI1MzkxODQxYjdmZjdkNjhmY2MxMA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 1,\r\n    \"Xsfr-Name\": \"Xsfr679f3d266721a4.37650679\",\r\n    \"Xsfr-Token\": \"rfx92pqu6EiW3iVrGUWxBoKjVg8yEuGGWhiEo2WLFUuW7LvPXbpoZE99dqmtapr6ASilZgDi8Pmqmz08b8DgY8+YROqomYwu87wUDX12gza1lTI+USDX42l7tZtT6SJ49Y7a+z6JDl17SRCanFOpzDJJnQcz25LAz/kFClz0glc=\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://v3.xmplus.dev/api/client/account/recharge"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Settings",
+			"item": [
+				{
+					"name": "updateAccountNotification",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XM-Token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwczovL3YzLnhtcGx1cy5kZXYiLCJhdWQiOiJodHRwczovL3YzLnhtcGx1cy5kZXYiLCJpYXQiOjE3Mzg0OTE4ODksIm5iZiI6MTczODQ5MTg4OSwiZXhwIjoxNzM4NTc2NDg5LCJlbWFpbCI6ImFkbWluQHhtcGx1cy5kZXYiLCJwYXNzd2QiOiJlN2VmMzhmYTQyYjliZjQxMWQwMTc5ZjY0ZDBjMWU5ZCJ9.cNdsAoXRBZ0ISusMnZ0sFVZ5pNiRECsuUdd27QFAqkFLm9r07s24uuFUc4vFz8WSQ-tyNfrIc5OLqGATYsYRxg#YWFlNjU1YmRmYjkxMTQ1YzMwM2I0MzAwNzA1NzAyMjQwNWNhYmIxMDJiZjI1MzkxODQxYjdmZjdkNjhmY2MxMA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"updateNotification\",\r\n    \"login\": 0,\r\n    \"order\": 1,\r\n    \"website\": 1,\r\n    \"traffic\": 1,\r\n    \"push\": 1,\r\n    \"Xsfr-Name\": \"Xsfr679f3d266721a4.37650679\",\r\n    \"Xsfr-Token\": \"rfx92pqu6EiW3iVrGUWxBoKjVg8yEuGGWhiEo2WLFUuW7LvPXbpoZE99dqmtapr6ASilZgDi8Pmqmz08b8DgY8+YROqomYwu87wUDX12gza1lTI+USDX42l7tZtT6SJ49Y7a+z6JDl17SRCanFOpzDJJnQcz25LAz/kFClz0glc=\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://v3.xmplus.dev/api/client/account/settings"
+					},
+					"response": []
+				},
+				{
+					"name": "updateAccountPassword",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XM-Token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwczovL3YzLnhtcGx1cy5kZXYiLCJhdWQiOiJodHRwczovL3YzLnhtcGx1cy5kZXYiLCJpYXQiOjE3Mzg0OTE4ODksIm5iZiI6MTczODQ5MTg4OSwiZXhwIjoxNzM4NTc2NDg5LCJlbWFpbCI6ImFkbWluQHhtcGx1cy5kZXYiLCJwYXNzd2QiOiJlN2VmMzhmYTQyYjliZjQxMWQwMTc5ZjY0ZDBjMWU5ZCJ9.cNdsAoXRBZ0ISusMnZ0sFVZ5pNiRECsuUdd27QFAqkFLm9r07s24uuFUc4vFz8WSQ-tyNfrIc5OLqGATYsYRxg#YWFlNjU1YmRmYjkxMTQ1YzMwM2I0MzAwNzA1NzAyMjQwNWNhYmIxMDJiZjI1MzkxODQxYjdmZjdkNjhmY2MxMA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"resetPassword\",\r\n    \"currentpassword\": \"currentpassword\",\r\n    \"newpassword\": \"newpassword\",\r\n    \"renewpassword\": \"confirmnewpassword\",\r\n    \"Xsfr-Name\": \"Xsfr679f3d266721a4.37650679\",\r\n    \"Xsfr-Token\": \"rfx92pqu6EiW3iVrGUWxBoKjVg8yEuGGWhiEo2WLFUuW7LvPXbpoZE99dqmtapr6ASilZgDi8Pmqmz08b8DgY8+YROqomYwu87wUDX12gza1lTI+USDX42l7tZtT6SJ49Y7a+z6JDl17SRCanFOpzDJJnQcz25LAz/kFClz0glc=\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://v3.xmplus.dev/api/client/account/settings",
+							"protocol": "https",
+							"host": [
+								"v3",
+								"xmplus",
+								"dev"
+							],
+							"path": [
+								"api",
+								"client",
+								"account",
+								"settings"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAccountAuthenticator",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XM-Token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwczovL3YzLnhtcGx1cy5kZXYiLCJhdWQiOiJodHRwczovL3YzLnhtcGx1cy5kZXYiLCJpYXQiOjE3Mzg0OTE4ODksIm5iZiI6MTczODQ5MTg4OSwiZXhwIjoxNzM4NTc2NDg5LCJlbWFpbCI6ImFkbWluQHhtcGx1cy5kZXYiLCJwYXNzd2QiOiJlN2VmMzhmYTQyYjliZjQxMWQwMTc5ZjY0ZDBjMWU5ZCJ9.cNdsAoXRBZ0ISusMnZ0sFVZ5pNiRECsuUdd27QFAqkFLm9r07s24uuFUc4vFz8WSQ-tyNfrIc5OLqGATYsYRxg#YWFlNjU1YmRmYjkxMTQ1YzMwM2I0MzAwNzA1NzAyMjQwNWNhYmIxMDJiZjI1MzkxODQxYjdmZjdkNjhmY2MxMA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"setAuthenticator\",\r\n    \"ga_code\": \"123456\",\r\n    \"Xsfr-Name\": \"Xsfr679f3d266721a4.37650679\",\r\n    \"Xsfr-Token\": \"rfx92pqu6EiW3iVrGUWxBoKjVg8yEuGGWhiEo2WLFUuW7LvPXbpoZE99dqmtapr6ASilZgDi8Pmqmz08b8DgY8+YROqomYwu87wUDX12gza1lTI+USDX42l7tZtT6SJ49Y7a+z6JDl17SRCanFOpzDJJnQcz25LAz/kFClz0glc=\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://v3.xmplus.dev/api/client/account/settings",
+							"protocol": "https",
+							"host": [
+								"v3",
+								"xmplus",
+								"dev"
+							],
+							"path": [
+								"api",
+								"client",
+								"account",
+								"settings"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAccountConnectionPassword",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XM-Token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwczovL3YzLnhtcGx1cy5kZXYiLCJhdWQiOiJodHRwczovL3YzLnhtcGx1cy5kZXYiLCJpYXQiOjE3Mzg0OTE4ODksIm5iZiI6MTczODQ5MTg4OSwiZXhwIjoxNzM4NTc2NDg5LCJlbWFpbCI6ImFkbWluQHhtcGx1cy5kZXYiLCJwYXNzd2QiOiJlN2VmMzhmYTQyYjliZjQxMWQwMTc5ZjY0ZDBjMWU5ZCJ9.cNdsAoXRBZ0ISusMnZ0sFVZ5pNiRECsuUdd27QFAqkFLm9r07s24uuFUc4vFz8WSQ-tyNfrIc5OLqGATYsYRxg#YWFlNjU1YmRmYjkxMTQ1YzMwM2I0MzAwNzA1NzAyMjQwNWNhYmIxMDJiZjI1MzkxODQxYjdmZjdkNjhmY2MxMA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"resetConnection\",\r\n    \"mode\": \"linkpass\",\r\n    \"Xsfr-Name\": \"Xsfr679f3d266721a4.37650679\",\r\n    \"Xsfr-Token\": \"rfx92pqu6EiW3iVrGUWxBoKjVg8yEuGGWhiEo2WLFUuW7LvPXbpoZE99dqmtapr6ASilZgDi8Pmqmz08b8DgY8+YROqomYwu87wUDX12gza1lTI+USDX42l7tZtT6SJ49Y7a+z6JDl17SRCanFOpzDJJnQcz25LAz/kFClz0glc=\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://v3.xmplus.dev/api/client/account/settings",
+							"protocol": "https",
+							"host": [
+								"v3",
+								"xmplus",
+								"dev"
+							],
+							"path": [
+								"api",
+								"client",
+								"account",
+								"settings"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "getOrders",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XM-Token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwczovL3YzLnhtcGx1cy5kZXYiLCJhdWQiOiJodHRwczovL3YzLnhtcGx1cy5kZXYiLCJpYXQiOjE3Mzg0OTE4ODksIm5iZiI6MTczODQ5MTg4OSwiZXhwIjoxNzM4NTc2NDg5LCJlbWFpbCI6ImFkbWluQHhtcGx1cy5kZXYiLCJwYXNzd2QiOiJlN2VmMzhmYTQyYjliZjQxMWQwMTc5ZjY0ZDBjMWU5ZCJ9.cNdsAoXRBZ0ISusMnZ0sFVZ5pNiRECsuUdd27QFAqkFLm9r07s24uuFUc4vFz8WSQ-tyNfrIc5OLqGATYsYRxg#YWFlNjU1YmRmYjkxMTQ1YzMwM2I0MzAwNzA1NzAyMjQwNWNhYmIxMDJiZjI1MzkxODQxYjdmZjdkNjhmY2MxMA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Xsfr-Name\": \"Xsfr679f3d266721a4.37650679\",\r\n    \"Xsfr-Token\": \"rfx92pqu6EiW3iVrGUWxBoKjVg8yEuGGWhiEo2WLFUuW7LvPXbpoZE99dqmtapr6ASilZgDi8Pmqmz08b8DgY8+YROqomYwu87wUDX12gza1lTI+USDX42l7tZtT6SJ49Y7a+z6JDl17SRCanFOpzDJJnQcz25LAz/kFClz0glc=\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://v3.xmplus.dev/api/client/orders",
+							"protocol": "https",
+							"host": [
+								"v3",
+								"xmplus",
+								"dev"
+							],
+							"path": [
+								"api",
+								"client",
+								"orders"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createOrder",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XM-Token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwczovL3YzLnhtcGx1cy5kZXYiLCJhdWQiOiJodHRwczovL3YzLnhtcGx1cy5kZXYiLCJpYXQiOjE3Mzg0OTE4ODksIm5iZiI6MTczODQ5MTg4OSwiZXhwIjoxNzM4NTc2NDg5LCJlbWFpbCI6ImFkbWluQHhtcGx1cy5kZXYiLCJwYXNzd2QiOiJlN2VmMzhmYTQyYjliZjQxMWQwMTc5ZjY0ZDBjMWU5ZCJ9.cNdsAoXRBZ0ISusMnZ0sFVZ5pNiRECsuUdd27QFAqkFLm9r07s24uuFUc4vFz8WSQ-tyNfrIc5OLqGATYsYRxg#YWFlNjU1YmRmYjkxMTQ1YzMwM2I0MzAwNzA1NzAyMjQwNWNhYmIxMDJiZjI1MzkxODQxYjdmZjdkNjhmY2MxMA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"packageid\": 1,\r\n    \"cycle\": \"month\",\r\n    \"code\": \"\",\r\n    \"auto_renew\": 0,\r\n    \"Xsfr-Name\": \"Xsfr679f3d266721a4.37650679\",\r\n    \"Xsfr-Token\": \"rfx92pqu6EiW3iVrGUWxBoKjVg8yEuGGWhiEo2WLFUuW7LvPXbpoZE99dqmtapr6ASilZgDi8Pmqmz08b8DgY8+YROqomYwu87wUDX12gza1lTI+USDX42l7tZtT6SJ49Y7a+z6JDl17SRCanFOpzDJJnQcz25LAz/kFClz0glc=\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://v3.xmplus.dev/api/client/order/create",
+							"protocol": "https",
+							"host": [
+								"v3",
+								"xmplus",
+								"dev"
+							],
+							"path": [
+								"api",
+								"client",
+								"order",
+								"create"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "viewOrder",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XM-Token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwczovL3YzLnhtcGx1cy5kZXYiLCJhdWQiOiJodHRwczovL3YzLnhtcGx1cy5kZXYiLCJpYXQiOjE3Mzg0OTE4ODksIm5iZiI6MTczODQ5MTg4OSwiZXhwIjoxNzM4NTc2NDg5LCJlbWFpbCI6ImFkbWluQHhtcGx1cy5kZXYiLCJwYXNzd2QiOiJlN2VmMzhmYTQyYjliZjQxMWQwMTc5ZjY0ZDBjMWU5ZCJ9.cNdsAoXRBZ0ISusMnZ0sFVZ5pNiRECsuUdd27QFAqkFLm9r07s24uuFUc4vFz8WSQ-tyNfrIc5OLqGATYsYRxg#YWFlNjU1YmRmYjkxMTQ1YzMwM2I0MzAwNzA1NzAyMjQwNWNhYmIxMDJiZjI1MzkxODQxYjdmZjdkNjhmY2MxMA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"order_id\": \"ECWAXCQM4Q63DXWFGYSV\",\r\n    \"Xsfr-Name\": \"Xsfr679f3d266721a4.37650679\",\r\n    \"Xsfr-Token\": \"rfx92pqu6EiW3iVrGUWxBoKjVg8yEuGGWhiEo2WLFUuW7LvPXbpoZE99dqmtapr6ASilZgDi8Pmqmz08b8DgY8+YROqomYwu87wUDX12gza1lTI+USDX42l7tZtT6SJ49Y7a+z6JDl17SRCanFOpzDJJnQcz25LAz/kFClz0glc=\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://v3.xmplus.dev/api/client/order/view",
+							"protocol": "https",
+							"host": [
+								"v3",
+								"xmplus",
+								"dev"
+							],
+							"path": [
+								"api",
+								"client",
+								"order",
+								"view"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "payOrder",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XM-Token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwczovL3YzLnhtcGx1cy5kZXYiLCJhdWQiOiJodHRwczovL3YzLnhtcGx1cy5kZXYiLCJpYXQiOjE3Mzg0OTE4ODksIm5iZiI6MTczODQ5MTg4OSwiZXhwIjoxNzM4NTc2NDg5LCJlbWFpbCI6ImFkbWluQHhtcGx1cy5kZXYiLCJwYXNzd2QiOiJlN2VmMzhmYTQyYjliZjQxMWQwMTc5ZjY0ZDBjMWU5ZCJ9.cNdsAoXRBZ0ISusMnZ0sFVZ5pNiRECsuUdd27QFAqkFLm9r07s24uuFUc4vFz8WSQ-tyNfrIc5OLqGATYsYRxg#YWFlNjU1YmRmYjkxMTQ1YzMwM2I0MzAwNzA1NzAyMjQwNWNhYmIxMDJiZjI1MzkxODQxYjdmZjdkNjhmY2MxMA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderid\": \"ECWAXCQM4Q63DXWFGYSV\",\r\n    \"paymentid\": -1,\r\n    \"Xsfr-Name\": \"Xsfr679f3d266721a4.37650679\",\r\n    \"Xsfr-Token\": \"rfx92pqu6EiW3iVrGUWxBoKjVg8yEuGGWhiEo2WLFUuW7LvPXbpoZE99dqmtapr6ASilZgDi8Pmqmz08b8DgY8+YROqomYwu87wUDX12gza1lTI+USDX42l7tZtT6SJ49Y7a+z6JDl17SRCanFOpzDJJnQcz25LAz/kFClz0glc=\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://v3.xmplus.dev/api/client/order/pay",
+							"protocol": "https",
+							"host": [
+								"v3",
+								"xmplus",
+								"dev"
+							],
+							"path": [
+								"api",
+								"client",
+								"order",
+								"pay"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Package",
+			"item": [
+				{
+					"name": "getPackages",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XM-Token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwczovL3YzLnhtcGx1cy5kZXYiLCJhdWQiOiJodHRwczovL3YzLnhtcGx1cy5kZXYiLCJpYXQiOjE3Mzg0OTE4ODksIm5iZiI6MTczODQ5MTg4OSwiZXhwIjoxNzM4NTc2NDg5LCJlbWFpbCI6ImFkbWluQHhtcGx1cy5kZXYiLCJwYXNzd2QiOiJlN2VmMzhmYTQyYjliZjQxMWQwMTc5ZjY0ZDBjMWU5ZCJ9.cNdsAoXRBZ0ISusMnZ0sFVZ5pNiRECsuUdd27QFAqkFLm9r07s24uuFUc4vFz8WSQ-tyNfrIc5OLqGATYsYRxg#YWFlNjU1YmRmYjkxMTQ1YzMwM2I0MzAwNzA1NzAyMjQwNWNhYmIxMDJiZjI1MzkxODQxYjdmZjdkNjhmY2MxMA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Xsfr-Name\": \"Xsfr679f3d266721a4.37650679\",\r\n    \"Xsfr-Token\": \"rfx92pqu6EiW3iVrGUWxBoKjVg8yEuGGWhiEo2WLFUuW7LvPXbpoZE99dqmtapr6ASilZgDi8Pmqmz08b8DgY8+YROqomYwu87wUDX12gza1lTI+USDX42l7tZtT6SJ49Y7a+z6JDl17SRCanFOpzDJJnQcz25LAz/kFClz0glc=\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://v3.xmplus.dev/api/client/packages",
+							"protocol": "https",
+							"host": [
+								"v3",
+								"xmplus",
+								"dev"
+							],
+							"path": [
+								"api",
+								"client",
+								"packages"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "packageInfo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XM-Token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwczovL3YzLnhtcGx1cy5kZXYiLCJhdWQiOiJodHRwczovL3YzLnhtcGx1cy5kZXYiLCJpYXQiOjE3Mzg0OTE4ODksIm5iZiI6MTczODQ5MTg4OSwiZXhwIjoxNzM4NTc2NDg5LCJlbWFpbCI6ImFkbWluQHhtcGx1cy5kZXYiLCJwYXNzd2QiOiJlN2VmMzhmYTQyYjliZjQxMWQwMTc5ZjY0ZDBjMWU5ZCJ9.cNdsAoXRBZ0ISusMnZ0sFVZ5pNiRECsuUdd27QFAqkFLm9r07s24uuFUc4vFz8WSQ-tyNfrIc5OLqGATYsYRxg#YWFlNjU1YmRmYjkxMTQ1YzMwM2I0MzAwNzA1NzAyMjQwNWNhYmIxMDJiZjI1MzkxODQxYjdmZjdkNjhmY2MxMA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"packageid\": 2,\r\n    \"Xsfr-Name\": \"Xsfr679f3d266721a4.37650679\",\r\n    \"Xsfr-Token\": \"rfx92pqu6EiW3iVrGUWxBoKjVg8yEuGGWhiEo2WLFUuW7LvPXbpoZE99dqmtapr6ASilZgDi8Pmqmz08b8DgY8+YROqomYwu87wUDX12gza1lTI+USDX42l7tZtT6SJ49Y7a+z6JDl17SRCanFOpzDJJnQcz25LAz/kFClz0glc=\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://v3.xmplus.dev/api/client/package/billing/info",
+							"protocol": "https",
+							"host": [
+								"v3",
+								"xmplus",
+								"dev"
+							],
+							"path": [
+								"api",
+								"client",
+								"package",
+								"billing",
+								"info"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://farming-simulator.pstmn.io"
+		}
+	]
+}
